@@ -1,0 +1,29 @@
+Desenvolvimento cliente - servidor
+
+
+Todo servidor web é um servidor de arquivos.
+
+Projeto java com apachae é chamado tomcat.
+
+EJB container é outra maquina virtual que gerencia vida util de objetos(São objetos que vc não da new)(progamador injeta dependencia).
+
+URL:
+    Ex:http://www.professor.com.br:80/index.html
+
+    1- Protocolo........: http
+    2- Server name......: www.professor.com.br OU ip
+    3- Porta............: 80
+    4- Recurso padrao...: arquivos...
+
+    
+
+<---------------------------------------------------------------------------------------------------------------------------------------!>
+:MVC:
+
+Model.....: Conjuntos de classes e objetos que fazem parte do dominio da sua app.(dominio da sua aplicação é são objetos criados para responder problemas da suas regras e logicas de negocio)
+View......: Tudo aquilo que é visto pelo usuario.
+Controller: Orquestração do programa (Tipo um maestro).
+
+
+
+
