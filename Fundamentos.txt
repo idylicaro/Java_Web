@@ -1,6 +1,5 @@
 Desenvolvimento cliente - servidor
 
-
 Todo servidor web é um servidor de arquivos.
 
 Projeto java com apachae é chamado tomcat.
@@ -15,7 +14,15 @@ URL:
     3- Porta............: 80
     4- Recurso padrao...: arquivos...
 
-    
+<---------------------------------------------------------------------------------------------------------------------------------------!>    
+-Servlet: é uma classe Java usada para estender as funcionalidades de um servidor.
+ Apesar dos servlets poderem responder a quaisquer tipos de requisições, eles normalmente são usados para estender as aplicações hospedadas por servidores web,
+ desta forma eles podem ser imaginados como Applets Java que rodam em servidores em vez de rodarem nos navegadores web.
+ Estes tipos de servlets são os equivalentes Java a outras tecnologias de conteúdo Web dinâmico, como PHP e ASP.NET. 
+
+-Servlet é tipo "um controller".
+
+-(isso no web.xml(configuração...))Todo servelet ele precisa de um nome,classpath e mapping até agora entendi isso na pratica.
 
 <---------------------------------------------------------------------------------------------------------------------------------------!>
 :MVC:
@@ -24,6 +31,20 @@ Model.....: Conjuntos de classes e objetos que fazem parte do dominio da sua app
 View......: Tudo aquilo que é visto pelo usuario.
 Controller: Orquestração do programa (Tipo um maestro).
 
+<----------------------------------------------------------------------------------------------------------------------------------------!>
+(Para a url permanecer o msm) RequestDispatche
+
+Parametros na url sao divididas por '?'.
 
 
+
+---------------------
+Recebendo dados pela Request (recebendo dados via escopo da request)
+<jsp:useBean id="Usuario" type="Model.Usuario" scope="request"/>
+---------------------------------------------------------------------
+Recebendo dados via section
+
+---------------------
+expression language : ${} 
+    permite que a camada de apresentação (páginas da web) se comunique com a lógica do aplicativo (beans gerenciados).
 
