@@ -7,8 +7,16 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>br.com.idylicaro.songfeel.controller.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MyPlaylistsServlet</servlet-name>
+        <servlet-class>br.com.idylicaro.songfeel.controller.MyPlaylistsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/loginservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyPlaylistsServlet</servlet-name>
+        <url-pattern>/myplaylist</url-pattern>
     </servlet-mapping>
 </web-app>

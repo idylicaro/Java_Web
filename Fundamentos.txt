@@ -48,3 +48,9 @@ Recebendo dados via section
 expression language : ${} 
     permite que a camada de apresentação (páginas da web) se comunique com a lógica do aplicativo (beans gerenciados).
 
+
+
+---------------------
+Session
+
+quando é chamado o " request.getSession().setAttribute("",objeto) " basicamente vc ta criando o vinculo do navegador com o servlet

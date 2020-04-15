@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<jsp:useBean id="Usuario" type="br.com.idylicaro.songfeel.model.Usuario" scope="session"/>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -18,8 +19,8 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <img align="center" class="rounded mx auto d-block" src="Images\LOGOVERDE.jpg" width="50%">
+            <div class="col-md-12" align="center">
+                <img class="rounded mx auto d-block" src="Images\LOGO.jpg" width="25%">
             </div>
         </div>
         <div class="row">
@@ -33,11 +34,34 @@
         <div class="row">
             <div class="col-md-12">
                 <h4 class="text-center text-primary">
-                    Bem Vindo!!!
+                    Bem Vindo, ${Usuario.nome}!
                 </h4>
             </div>
         </div>
+        <div class="row" id="navbar">
+            <div class="col-md-2">
+                &nbsp;
+            </div>
+                <div class="col-md-8">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Nova Playlist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./myplaylist">Minhas Playlists</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Upload Musica</a>
+                        </li>
+                    </ul>
+                </div>
+            <div class="col-md-2">
+                &nbsp;
+            </div>
+        </div>
+        <div class="row">
 
+        </div>
     </div>
 
         <script src="js/jquery.min.js"></script>

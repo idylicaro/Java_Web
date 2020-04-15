@@ -19,8 +19,8 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <img align="center" class="rounded mx auto d-block" src="Images\LOGOVERDE.jpg" width="50%">
+            <div class="col-md-12" align="center">
+                <img class="rounded mx auto d-block" src="Images\LOGO.jpg" width="25%">
             </div>
         </div>
         <div class="row">
