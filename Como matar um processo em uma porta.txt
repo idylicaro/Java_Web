@@ -1,0 +1,14 @@
+
+Como é fácil lidar com o prompt de comando . Você pode fazer o seguinte. Eu presumo que você trabalha no Windows .
+
+Abra o CMD e digite a seguir.
+
+netstat -aon | find "1099"
+Se um processo usa a porta acima, ele deve retornar algo como este.
+
+TCP    xxx.xx.xx.xx:1099      xx.xx.xx.xxx:443      ESTABLISHED     2222
+O último valor da coluna (2222) é referido ao ID do processo ( PID ).
+
+Apenas mate da seguinte forma.
+
+taskkill /F /PID 2222
