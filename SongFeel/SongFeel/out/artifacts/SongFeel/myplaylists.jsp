@@ -62,14 +62,15 @@
     </div>
     <!--tags interativas com jstl-->
     <c:forEach var="playlist" items="${Usuario.playLists}">
-        <div class="row" >
-            <div class="col-md-2">&nbsp</div>
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
             <div class="col-md-8">
                 ${playlist.titulo}
             </div>
-            <div class="col-md-2">&nbsp</div>
+            <div class="col-md-2">&nbsp;</div>
         </div>
     </c:forEach>
+
 </div>
 
 <script src="js/jquery.min.js"></script>
