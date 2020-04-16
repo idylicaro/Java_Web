@@ -1,5 +1,6 @@
 package controller;
 
+import DAO.DataSource;
 import DAO.UsuarioDAO;
 import model.Usuario;
 
@@ -16,21 +17,30 @@ import java.util.List;
 @WebServlet("/loginServlet")
 public class loginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String pagina;
+        String pagina = "/error.jsp";
         String email = request.getParameter("txtEmail");
         String senha = request.getParameter("txtSenha");
+        Usuario incompleto = new Usuario();
+        incompleto.setEmail(email);
+        incompleto.setSenha(senha);
 
-        List<Object> res;
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
-        res = usuarioDAO.read(null);
 
-        if (res.size() > 0){
-            request.getSession().setAttribute("Usuario",res.get(0));
-            pagina = "/myaccount.jsp";
-        }else{
-            request.setAttribute("erroSTR","Email / Senha não encontrados!");
-            pagina = "/error.jsp";
+        try {
+            DataSource ds = new DataSource();
+            UsuarioDAO usuarioDAO = new UsuarioDAO(ds);
+            List<Object> res = usuarioDAO.read(incompleto);
+
+            if (res != null && res.size() > 0){
+                pagina = "/myaccount.jsp";
+                request.getSession().setAttribute("Usuario",res.get(0));
+            }else{
+                request.setAttribute("erroSTR","Email / Senha Invalidos!");
+            }
+            ds.getConnection().close();
+        }catch (Exception ex){
+            request.setAttribute("erroSTR","Erro ao recuperar!");
         }
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina) ;
         dispatcher.forward(request,response);
     }
