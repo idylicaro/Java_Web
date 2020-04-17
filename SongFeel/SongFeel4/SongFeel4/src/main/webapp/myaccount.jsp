@@ -3,6 +3,7 @@
 <%@ page isELIgnored= "false" %>
 <html lang="pt-br">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,25 +40,27 @@
                 </h4>
             </div>
         </div>
-        <div class="row" id="navbar">
-            <div class="col-md-2">
-                &nbsp;
+        <div class="row " id="navbar">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 btn">
+                <span class="text-center">
+                    <a class="nav-link active" href="#">Nova Playlist</a>
+                </span>
             </div>
-                <div class="col-md-8">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Nova Playlist</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./MyPlaylistsServlet">Minhas Playlists</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Upload Musica</a>
-                        </li>
-                    </ul>
-                </div>
-            <div class="col-md-2">
-                &nbsp;
+            <div class="col-md-2 btn">
+                <span class="text-center">
+                    <a class="nav-link" href="./MyPlaylistsServlet">Minhas Playlists</a>
+                </span>
+            </div>
+            <div class="col-md-2 btn">
+                <span class="text-center">
+                    <a class="nav-link" href="#">Upload Musica</a>
+                </span>
+            </div>
+            <div class="col-md-2 btn">
+            <span class="text-center">
+                    <a class="nav-link active" href="#">Logout</a>
+            </span>
             </div>
         </div>
         <div class="row">

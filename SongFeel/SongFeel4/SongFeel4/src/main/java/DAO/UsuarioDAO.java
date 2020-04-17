@@ -7,6 +7,7 @@ import model.Usuario;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,33 @@ public class UsuarioDAO implements GenericDAO{
         this.dataSource = dataSource;
     }
     public void create(Object o){
+        try {
+            if (o instanceof Usuario){
+                Usuario usuario = (Usuario) o;
+                String SQL = "INSERT INTO tblUsuario VALUES (null,?,?,?)";
+                PreparedStatement stm = dataSource.getConnection().prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
+                stm.setString(1, usuario.getNome());
+                stm.setString(2, usuario.getEmail());
+                stm.setString(3, usuario.getSenha());
 
+                //verifica quantas "rows" foram afetadas
+                int res = stm.executeUpdate();
+                if(res !=0){
+                    ResultSet rs = stm.getGeneratedKeys();
+                    if(rs.next()){
+                        usuario.setId(rs.getInt(1));
+                    }
+                    rs.close();
+                }
+                stm.close();
+
+
+            }else{
+                throw new RuntimeException("Invalid User Model Object");
+            }
+        }catch (SQLException ex){
+            System.out.println("Erro a inserir usuario "+ex.getMessage());
+        }
     }
     public List<Object> read(Object o){
         try {

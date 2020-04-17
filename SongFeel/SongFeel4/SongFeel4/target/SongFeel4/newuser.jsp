@@ -29,6 +29,13 @@
                 SongFeel - Sua playlist na Web!
             </h3>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center">
+                    Faça Parte!
+                </h4>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-2">
@@ -37,9 +44,14 @@
             <h3 class="text-center">
                 Entrar!
             </h3>
-            <form role="form" action="loginServlet" method="POST">
+            <form role="form" action="efetivacadastro" method="POST">
                 <div class="form-group">
-
+                    <label for="exampleNome">
+                        Seu Nome:
+                    </label>
+                    <input type="text" class="form-control" id="exampleNome" name="txtNome">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">
                         Seu Email:
                     </label>
@@ -53,9 +65,9 @@
                     <input type="password" class="form-control" id="exampleInputPassword1" name="txtSenha">
                 </div>
                 <button type="submit" class="btn btn-primary">
-                    Entrar
+                    Efetivar Cadastro
                 </button>
-                Não tem conta? Clique <a href="./NovoUsuarioServlet">AQUI</a>
+
             </form>
         </div>
         <div class="col-md-2">
