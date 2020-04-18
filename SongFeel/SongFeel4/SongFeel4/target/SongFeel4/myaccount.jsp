@@ -44,7 +44,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-2 btn">
                 <span class="text-center">
-                    <a class="nav-link active" href="#">Nova Playlist</a>
+                    <a class="nav-link active" href="./NovaPlaylist">Nova Playlist</a>
                 </span>
             </div>
             <div class="col-md-2 btn">

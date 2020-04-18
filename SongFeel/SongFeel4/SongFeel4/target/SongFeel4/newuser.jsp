@@ -41,9 +41,6 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
-            <h3 class="text-center">
-                Entrar!
-            </h3>
             <form role="form" action="efetivacadastro" method="POST">
                 <div class="form-group">
                     <label for="exampleNome">

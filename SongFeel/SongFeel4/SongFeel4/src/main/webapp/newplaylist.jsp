@@ -32,52 +32,37 @@
                 SongFeel - Sua playlist na Web!
             </h3>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h4 class="text-center text-primary">
-                - Minhas Playlists -
-            </h4>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center">
+                    Crie sua playlist ${Usuario.nome} !
+                </h4>
+            </div>
         </div>
     </div>
-    <div class="row" id="navbar">
+    <div class="row">
         <div class="col-md-2">
-            &nbsp;
         </div>
         <div class="col-md-8">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="./NovaPlaylist">Nova Playlist</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Minhas Playlists</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Upload Musica</a>
-                </li>
-            </ul>
+            <form role="form" action="efetivaplaylist" method="POST">
+                <div class="form-group">
+                    <label for="exampleNome">
+                        Nome da playlist
+                    </label>
+                    <input type="text" class="form-control" id="exampleNome" name="txtNome">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Cria playlist
+                </button>
+
+            </form>
         </div>
         <div class="col-md-2">
-            &nbsp;
         </div>
     </div>
-    <!--tags interativas com jstl-->
-    <c:forEach var="playlist" items="${Usuario.playLists}">
-        <div class="row">
-            <div class="col-md-2">&nbsp;</div>
-            <div class="col-md-8">
-                ${playlist.titulo}
-            </div>
-            <div class="col-md-2">&nbsp;</div>
-        </div>
-    </c:forEach>
-
 </div>
-
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
-

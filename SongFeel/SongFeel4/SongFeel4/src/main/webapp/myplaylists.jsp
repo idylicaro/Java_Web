@@ -48,7 +48,7 @@
         <div class="col-md-8">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Nova Playlist</a>
+                    <a class="nav-link active" href="./NovaPlaylist">Nova Playlist</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Minhas Playlists</a>
