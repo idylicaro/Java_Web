@@ -54,3 +54,10 @@ expression language : ${}
 Session
 
 quando é chamado o " request.getSession().setAttribute("",objeto) " basicamente vc ta criando o vinculo do navegador com o servlet
+
+
+
+
+---------------------
+quando o form vai passar mais de um tipo de dado ele tem que informa o enctype, ex:
+enctype ="multipart/form-data"
