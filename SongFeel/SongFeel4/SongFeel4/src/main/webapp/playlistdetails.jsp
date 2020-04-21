@@ -81,24 +81,7 @@
                 </div>
                 <div class="col-md-2">&nbsp</div>
             </div>
-
         </c:forEach>
-    <!--tags interativas com jstl-->
-    <c:forEach var="playlist" items="${Usuario.playLists}">
-        <div class="row">
-            <div class="col-md-2">&nbsp;</div>
-            <div class="col-md-8">
-                <strong> <a href="PlaylistDetailsServlet?id=${playlist.id}">${playlist.titulo}</a> </strong>
-                <ul>
-                    <c:forEach var="musica" items="${playlist.musicas}">
-                        <li>${musica.titulo} - ${musica.artista}</li>
-                    </c:forEach>
-                </ul>
-            </div>
-            <div class="col-md-2">&nbsp;</div>
-        </div>
-    </c:forEach>
-
 </div>
 
 <script src="js/jquery.min.js"></script>

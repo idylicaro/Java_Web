@@ -44,13 +44,7 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
-            <form role="form" action="UploadMusicaServlet" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="teste1">
-                        teste
-                    </label>
-                    <input type="text" class="form-group" id="teste1" name="teste1">
-                </div>
+            <form role="form" action="UploadMusicaServlet" method="post" enctype="multipart/form-data" >
                 <div class="form-group">
                     <label for="artista">
                         Artista

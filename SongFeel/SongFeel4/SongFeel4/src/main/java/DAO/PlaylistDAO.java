@@ -99,7 +99,7 @@ public class PlaylistDAO implements  GenericDAO {
                     if(rs.getString("titulo") != null){
                         Musica musica = new Musica();
                         musica.setTitulo(rs.getString("titulo"));
-                        musica.setId(rs.getInt("idMusica "));
+                        musica.setId(rs.getInt("idMusica"));
                         musica.setArtista(rs.getString("artista"));
                         musica.setAlbum(rs.getString("album"));
                         musica.setLinkMP3(rs.getString("linkMP3"));

@@ -16,7 +16,7 @@ public class MusicaDAO implements GenericDAO{
         try{
             if (o instanceof Musica){
                 Musica musica = (Musica) o;
-                String SQL = "INSERT INTO tblMusica VALUES (null, ?, ?, ?, ?, ?";
+                String SQL = "INSERT INTO tblMusica VALUES (null, ?, ?, ?, ?, ?)";
                 PreparedStatement stm = dataSource.getConnection().prepareStatement(SQL);
                 stm.setString(1,musica.getTitulo());
                 stm.setString(2,musica.getArtista());
@@ -27,7 +27,7 @@ public class MusicaDAO implements GenericDAO{
                 stm.close();
             }
         }catch (SQLException ex){
-            System.out.println("");
+            System.out.println("Erro ao salvar musica: "+ ex.getMessage());
         }
     }
 
