@@ -19,18 +19,21 @@ import java.io.InputStream;
 import java.util.Collection;
 
 @WebServlet("/UploadMusicaServlet")
-@MultipartConfig(location="/tmp", fileSizeThreshold=1024*1024,
-        maxFileSize=1024*1024*5, maxRequestSize=1024*1024*5*5)
+@MultipartConfig(maxFileSize=1024*1024*5, maxRequestSize=1024*1024*5*5)
 public class UploadMusicaServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pagina = "/error.jsp";
+        System.out.printf(request.getParameter("teste1"));
         if(request.getSession().getAttribute("Usuario") != null){
             try {
                 String artista = request.getParameter("txtArtista");
                 String album = request.getParameter("txtAlbum");
                 String titulo = request.getParameter("txtNomeMusica");
+                System.out.println("titulo: "+titulo);
+                System.out.println(request.getParameter("txtEstilo"));
                 int estilo = Integer.parseInt(request.getParameter("txtEstilo"));
+                System.out.println(estilo);
 
                 InputStream arqOriginal = request.getPart("fileMP3").getInputStream();
                 String nomeArquivoOriginal = request.getPart("fileMP3").getSubmittedFileName();
@@ -62,6 +65,7 @@ public class UploadMusicaServlet extends HttpServlet {
 
             }catch (Exception ex){
                 request.setAttribute("erroSTR","Upload Falhou!");
+                ex.printStackTrace();
             }
         }else {
             request.setAttribute("erroSTR","Usuario não conectado!");

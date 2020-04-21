@@ -51,10 +51,10 @@
                     <a class="nav-link active" href="./NovaPlaylist">Nova Playlist</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Minhas Playlists</a>
+                    <a class="nav-link" href="/myplaylists.jsp">Minhas Playlists</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Upload Musica</a>
+                    <a class="nav-link" href="./NovaMusicaServlet">Upload Musica</a>
                 </li>
             </ul>
         </div>
@@ -67,7 +67,12 @@
         <div class="row">
             <div class="col-md-2">&nbsp;</div>
             <div class="col-md-8">
-                ${playlist.titulo}
+                <strong> <a href="PlaylistDetailsServlet?id=${playlist.id}">${playlist.titulo}</a> </strong>
+                    <ul>
+                        <c:forEach var="musica" items="${playlist.musicas}">
+                            <li>${musica.titulo} - ${musica.artista}</li>
+                        </c:forEach>
+                    </ul>
             </div>
             <div class="col-md-2">&nbsp;</div>
         </div>

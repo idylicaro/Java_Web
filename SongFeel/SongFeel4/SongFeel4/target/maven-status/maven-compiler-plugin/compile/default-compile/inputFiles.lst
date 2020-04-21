@@ -1,8 +1,17 @@
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\MyPlaylistsServlet.java
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\DataSource.java
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\GenericDAO.java
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\model\Musica.java
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\loginServlet.java
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\UsuarioDAO.java
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\model\PlayList.java
-C:\Users\Dracula Castle\Documents\GitHub\JavaWeb\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\model\Usuario.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\UsuarioDAO.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\DataSource.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\model\Usuario.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\efetivacadastro.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\NovoUsuarioServlet.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\model\PlayList.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\MusicaDAO.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\NovaPlaylistServlet.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\model\Musica.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\GenericDAO.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\UploadMusicaServlet.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\DAO\PlaylistDAO.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\efetivaplaylist.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\MyPlaylistsServlet.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\NovaMusicaServlet.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\loginServlet.java
+C:\Users\Idylicaro\Documents\Github\Java_Web\SongFeel\SongFeel4\SongFeel4\src\main\java\controller\PlaylistDetailsServlet.java

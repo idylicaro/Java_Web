@@ -1,0 +1,17 @@
+controller\efetivaplaylist.class
+DAO\GenericDAO.class
+DAO\PlaylistDAO.class
+controller\loginServlet.class
+DAO\UsuarioDAO.class
+model\PlayList.class
+controller\NovaPlaylistServlet.class
+DAO\DataSource.class
+model\Musica.class
+model\Usuario.class
+controller\efetivacadastro.class
+controller\NovaMusicaServlet.class
+controller\MyPlaylistsServlet.class
+controller\PlaylistDetailsServlet.class
+controller\UploadMusicaServlet.class
+controller\NovoUsuarioServlet.class
+DAO\MusicaDAO.class

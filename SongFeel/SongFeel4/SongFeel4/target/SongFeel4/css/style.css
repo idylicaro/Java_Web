@@ -11,3 +11,11 @@ body{
 .btn{
     background: #449d44;
 }
+.tituloMusica{
+    color: #FFFFFF;
+    font-size: small;
+}
+.artista{
+    color: #FFFFFF;
+    font-size: medium;
+}

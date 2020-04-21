@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-2 btn">
                 <span class="text-center">
-                    <a class="nav-link" href="#">Upload Musica</a>
+                    <a class="nav-link" href="./NovaMusicaServlet">Upload Musica</a>
                 </span>
             </div>
             <div class="col-md-2 btn">

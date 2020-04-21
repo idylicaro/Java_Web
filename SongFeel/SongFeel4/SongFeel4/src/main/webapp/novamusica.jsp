@@ -44,7 +44,13 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
-            <form role="form" action="UploadMusicaServlet" method="POST">
+            <form role="form" action="UploadMusicaServlet" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="teste1">
+                        teste
+                    </label>
+                    <input type="text" class="form-group" id="teste1" name="teste1">
+                </div>
                 <div class="form-group">
                     <label for="artista">
                         Artista
@@ -64,22 +70,22 @@
                     <input type="text" class="form-control" id="nomemusica" name="txtNomeMusica">
                 </div>
                 <div class="form-group">
-                    <label for="estilo">
+                    <label for="txtEstilo">
                         Estilo
                     </label>
-                    <select id="estilo" name="txtEstilo">
+                    <select id="txtEstilo" name="txtEstilo">
                         <option value="1">Heavy Metal</option>
                         <option value="2">City Pop</option>
+                        <option value="3">Games</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="inputFile">Selecionar Arquivo MP3</label>
-                    <input type="file" class="form-control-file" id="inputFile" name="fileMP3">
+                    <label for="fileMP3">Selecionar Arquivo MP3</label>
+                    <input type="file" class="form-control-file" id="fileMP3" name="fileMP3"/>
                 </div>
                 <button type="submit" class="btn btn-primary">
                     Adicionar Musica
                 </button>
-
             </form>
         </div>
         <div class="col-md-2">
