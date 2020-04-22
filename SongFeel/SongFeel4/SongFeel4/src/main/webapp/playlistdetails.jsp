@@ -75,7 +75,7 @@
     <div class="row">
         <div class="col-md-2">&nbsp</div>
             <div class="col-md-8">
-                <a href="./RecuperaMusicasServlet"><h5>+ Adicionar Músicas </h5> </a>
+                <a href="./RecuperaMusicasServlet?idplaylist=${Playlist.id}"><h5>+ Adicionar Músicas </h5> </a>
             </div>
         <div class="col-md-2">&nbsp</div>
     </div>

@@ -29,6 +29,8 @@ public class RecuperaMusicasServlet extends HttpServlet {
                 if(lista == null){
                     request.setAttribute("erroSTR","Erro ao recuperar musicas do banco de dados!");
                 }else {
+                    String idPlaylist = request.getParameter("idplaylist");
+                    request.setAttribute("idPlaylist",idPlaylist);
                     request.setAttribute("ListaMusicas",lista);
                     pagina = "/musicas.jsp";
                 }

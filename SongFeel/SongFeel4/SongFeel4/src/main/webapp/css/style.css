@@ -10,6 +10,7 @@ body{
 }
 .btn{
     background: #449d44;
+    color: #FFFFFF;
 }
 .tituloMusica{
     color: #FFFFFF;
@@ -18,8 +19,4 @@ body{
 .artista{
     color: #FFFFFF;
     font-size: medium;
-}
-#imgplay{
-    width: 10%;
-    height: 10%;
 }
