@@ -67,7 +67,7 @@
         <div class="col-md-2">&nbsp</div>
             <div class="col-md-8">
                 <h4>
-                    ${Playlist.titulo} <img class="img-fluid" src="Images/play.jpg" alt="Toca Playlist" title="Toca Playlist" width="32" height="32">
+                    ${Playlist.titulo} <a href="./PlayerServlet"> <img class="img-fluid" src="Images/play.jpg" alt="Toca Playlist" title="Toca Playlist" width="32" height="32"> </a>
                 </h4>
             </div>
         <div class="col-md-2">&nbsp</div>
