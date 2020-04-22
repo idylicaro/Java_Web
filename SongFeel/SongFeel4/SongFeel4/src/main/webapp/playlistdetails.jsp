@@ -52,7 +52,7 @@
                     <a class="nav-link active" href="./NovaPlaylist">Nova Playlist</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Minhas Playlists</a>
+                    <a class="nav-link" href="/myplaylists.jsp">Minhas Playlists</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Upload Musica</a>
@@ -67,8 +67,15 @@
         <div class="col-md-2">&nbsp</div>
             <div class="col-md-8">
                 <h4>
-                    ${Playlist.titulo}
+                    ${Playlist.titulo} <img id="imgplay" src="Images/play.jpg" alt="Toca Playlist" title="Toca Playlist">
                 </h4>
+            </div>
+        <div class="col-md-2">&nbsp</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">&nbsp</div>
+            <div class="col-md-8">
+                <h5>+ Adicionar Músicas </h5>
             </div>
         <div class="col-md-2">&nbsp</div>
     </div>
