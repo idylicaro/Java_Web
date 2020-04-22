@@ -3,7 +3,9 @@ package DAO;
 import model.Musica;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MusicaDAO implements GenericDAO{
@@ -33,6 +35,25 @@ public class MusicaDAO implements GenericDAO{
 
     @Override
     public List<Object> read(Object o) {
+        try{
+            String SQL = "SELECT * FROM tblMusica order by titulo";
+            PreparedStatement stm = dataSource.getConnection().prepareStatement(SQL);
+            ResultSet rs = stm.executeQuery();
+            List<Object> musicas = new ArrayList<Object>();
+            while (rs.next()){
+                Musica musica = new Musica();
+                musica.setId(rs.getInt("idMusica"));
+                musica.setTitulo(rs.getString("titulo"));
+                musica.setArtista(rs.getString("artista"));
+                musica.setAlbum("album");
+                musica.setEstilo(rs.getInt("estilo"));
+                musica.setLinkMP3(rs.getString("linkMP3"));
+                musicas.add(musica);
+            }
+            return musicas;
+        }catch (SQLException ex){
+            System.out.println("Erro ao recuperar acervo de musicas: " + ex.getMessage());
+        }
         return null;
     }
 

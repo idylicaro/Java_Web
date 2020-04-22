@@ -111,6 +111,7 @@ public class PlaylistDAO implements  GenericDAO {
             return playList;
         }catch (SQLException ex){
             System.out.println("Error ao recuperar detalhes da playlist: "+ex.getMessage());
+            ex.printStackTrace();
         }
         return null;
     }

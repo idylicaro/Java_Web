@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <jsp:useBean id="Usuario" type="model.Usuario" scope="session"/>
-<jsp:useBean id="Playlist" type="model.PlayList" scope="session"/>
+<jsp:useBean id="ListaMusicas" type="java.util.List" scope="request"/>
 <%@ page isELIgnored= "false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="pt-br">
@@ -38,7 +38,7 @@
     <div class="row">
         <div class="col-md-12">
             <h4 class="text-center text-primary">
-                - Minhas Playlists -
+                - Todas Musicas -
             </h4>
         </div>
     </div>
@@ -55,7 +55,7 @@
                     <a class="nav-link" href="/myplaylists.jsp">Minhas Playlists</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Upload Musica</a>
+                    <a class="nav-link" href="./NovaMusicaServlet">Upload Musica</a>
                 </li>
             </ul>
         </div>
@@ -63,32 +63,26 @@
             &nbsp;
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-2">&nbsp</div>
-            <div class="col-md-8">
-                <h4>
-                    ${Playlist.titulo} <img class="img-fluid" src="Images/play.jpg" alt="Toca Playlist" title="Toca Playlist" width="32" height="32">
-                </h4>
+    <!--tags interativas com jstl-->
+    <c:forEach var="musica" items="${ListaMusicas}">
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-1">
+               <h4> + </h4>
             </div>
-        <div class="col-md-2">&nbsp</div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">&nbsp</div>
-            <div class="col-md-8">
-                <a href="./RecuperaMusicasServlet"><h5>+ Adicionar Músicas </h5> </a>
+            <div class="col-md-7">
+                ${musica.titulo} - (${musica.artista})&nbsp;
+                <span class="artista"> Album ${musica.album} <br/> </span>
+                <span class="artista">Estilo:
+                    <c:if test="${musica.estilo == 1}"> HEAVY METAL</c:if>
+                    <c:if test="${musica.estilo == 2}"> CITY POP</c:if>
+                    <c:if test="${musica.estilo == 4}"> GAMES</c:if>
+
+                </span>
             </div>
-        <div class="col-md-2">&nbsp</div>
-    </div>
-        <c:forEach var="musica" items="${Playlist.musicas}">
-            <div class="row">
-                <div class="col-md-2">&nbsp</div>
-                <div class="col-md-8">
-                    <span class="tituloMusica">${musica.titulo}${musica.artista}</span>
-                    <span class="artista">${musica.artista} (Album: ${musica.album})</span>
-                </div>
-                <div class="col-md-2">&nbsp</div>
-            </div>
-        </c:forEach>
+        </div>
+    </c:forEach>
+
 </div>
 
 <script src="js/jquery.min.js"></script>
@@ -96,3 +90,4 @@
 <script src="js/scripts.js"></script>
 </body>
 </html>
+
