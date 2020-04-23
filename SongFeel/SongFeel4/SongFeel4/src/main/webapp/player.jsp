@@ -21,9 +21,20 @@
     <script type="text/javascript">
         var musics = new Array(); //lista de musicas
         var repeat = false;       // modo repetir
-        
+        var totalDeMusicas =0;
+        var url = "http://localhost:8080/SongFeel4/"
         function setupPlayer() {
-
+            var divMusicas = document.getElementById("playerContent");
+            var filhos = divMusicas.childNodes;
+            for (i=0; i< filhos.length; i++){
+                if(filhos[i].nodeName == "div"){
+                    musics.push(filhos[i].title);
+                    totalDeMusicas++;
+                }
+            }
+            var player = document.getElementById("musicplayer");
+            player.src = url+musics[0];
+            player.play();
         }
         function play(objectMusica) {
 
